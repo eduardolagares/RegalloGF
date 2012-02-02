@@ -1,0 +1,47 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Clientes</h2>
+            <ul>
+                <li><a href="<?php echo $this->url(array("action" => "cadastrar", "controller" => "clientes"), null, true); ?>">Adicionar cliente</a></li>
+            </ul>
+            <form action="<?php echo $this->url(array("controller" => "clientes", "action" => "buscar"), null, true) ?>" method="post">
+                <input type="text" value="<?php echo (empty($this->busca)) ? "" : $this->busca; ?>" name="busca" class="search">
+            </form>
+        </div>
+        <div class="content">
+            <table class="listing" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Telefone</th>
+                    <th>Devedor?</th>
+                    <th></th>
+                </tr>
+
+                <?php $cont = 0;
+                foreach ($this->registros as $r): ?>
+                    <tr <?php echo ($cont % 2 == 0) ? "class='even'" : ""; ?>>
+                        <td><?php echo $r["nome"]; ?></td>
+                        <td><?php echo $r["telefone1"]; ?></td>
+                        <td><?php echo $r["telefone2"]; ?></td>
+                        <td><?php if ($r["devedor"] != 1) : ?><span class="no"></span><?php else: ?><span class="yes"></span><?php endif; ?></td>
+                        <td><a class="edit" href="<?php echo $this->url(array("controller" => "clientes", "action" => "editar", "id" => $r["id"]), null, true) ?>">editar</a>
+                            <a class="delete" href="<?php echo $this->url(array("controller" => "clientes", "action" => "deletar", "id" => $r["id"]), null, true); ?>">deletar</a></td>
+                    </tr>
+                    <?php
+                    $cont++;
+                endforeach;
+                ?>
+            </table>
+            <div class="actions">
+                <?php
+                echo $this->paginationControl($this->registros, 'Sliding', 'paginator.phtml');
+                ?>
+
+                <div class="clear">&nbsp;</div>
+            </div>
+        </div>
+
+    </div>
+</div>
