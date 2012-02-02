@@ -1,22 +1,22 @@
-<?php echo $this->headScript()->appendFile($this->baseUrl("js/modules/default/produtos/form.js")); ?>
+<?php $this->headScript()->appendFile($this->baseUrl("js/modules/default/produtos/form.js")); ?>
 <div class="column grid-16">
     <div class="block">
         <div class="top">
             <h2>Produtos / Cadastrar</h2>
             <ul>
-                <li><a href="<?php echo $this->url(array("controller"=>"produtos","action"=>"index"),null,true) ?>">Voltar a lista</a></li>
+                <li><a href="<?php echo $this->url(array("controller" => "produtos", "action" => "index"), null, true) ?>">Voltar a lista</a></li>
             </ul>
         </div>
         <div class="content">
-            
+
             <form action="<?php echo $this->url(array("controller" => "produtos", "action" => "salvar")); ?>" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="produto[id]" value="" />
+                <input type="hidden" name="produto[id]" value="<?php echo $this->produto->id ?>" />
 
                 <fieldset>
                     <legend>Dados do produto</legend>
 
                     <p>
-                        <label><input type="checkbox" name="produto[ativo]" value="1" checked="checked"/>Ativo</label><br/>
+                        <label><input type="checkbox" name="produto[ativo]" value="1" <?php echo ($this->produto->ativo == 1) ? 'checked="checked"' :''; ?> />Ativo</label><br/>
                     </p>
 
                     <p>
@@ -33,21 +33,24 @@
                     <p>
                         <label>Categoria</label> <br/>
                         <select name="produto[categoria_id]">
-                            <?php foreach($this->categorias as $c): ?>
-                            <?php $check = "" ?>
-                            <option value="<?php echo $c->id; ?>"><?php echo $c->nome; ?></option>
+                            <?php foreach ($this->categorias as $c): ?>
+                                <?php $check = ($c->id = $this->produto->categoria_id) ? "selected='selected'" : ""; ?>
+                                <option value="<?php echo $c->id; ?>" <?php echo $check ?> ><?php echo $c->nome; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </p>
 
                     <p>
+                        <?php if (isset($this->produto->foto) && !empty($this->produto->foto)): ?>
+                            <img src="<?php echo $this->baseUrl("img/foto_produto/" . $this->produto->foto); ?>" width="100" /><br/>
+                        <?php endif; ?>
                         <label>Foto</label> <br/>
                         <input type="file" name="file"/>
                     </p>
 
                     <p>
                         <label>Descrição</label> <br/>
-                        <textarea name="produto[descricao]" rows="10" cols="80"></textarea>
+                        <textarea name="produto[descricao]" rows="10" cols="80"><?php echo $this->produto->descricao; ?></textarea>
                     </p>
 
                 </fieldset>
@@ -56,17 +59,17 @@
 
                     <p>
                         <label>Quantidade em estoque</label><br/>
-                        <input class="text small" type="text" value="" name="produto[estoque]"/>
+                        <input class="text small" type="text" value="<?php echo $this->produto->estoque ?>" name="produto[estoque]"/>
                     </p>
 
                     <p>
                         <label>Valor de custo</label><br/>
-                        <input id="produto_valor_custo" class="text small" type="text" value="" name="produto[valor_custo]"/>
+                        <input id="produto_valor_custo" class="text small" type="text" value="<?php echo $this->MoneyFormat($this->produto->valor_custo); ?>" name="produto[valor_custo]"/>
                     </p>
 
                     <p>
                         <label>Valor de venda</label><br/>
-                        <input id="produto_valor_venda" class="text small" type="text" value="" name="produto[valor_venda]"/>
+                        <input id="produto_valor_venda" class="text small" type="text" value="<?php echo $this->MoneyFormat($this->produto->valor_venda); ?>" name="produto[valor_venda]"/>
                     </p>
 
                     <p>
