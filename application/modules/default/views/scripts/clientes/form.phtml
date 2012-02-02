@@ -1,0 +1,46 @@
+<?php $this->headScript()->appendFile($this->baseUrl("js/modules/default/clientes/form.js"));  ?>
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Clientes</h2>
+            <ul>
+                <li><a href="<?php echo $this->url(array("controller" => "clientes", "action" => "index"), null, true) ?>">Voltar a lista</a></li>
+            </ul>
+        </div>
+        <div class="content">
+
+            <form action="<?php echo $this->url(array("controller" => "clientes", "action" => "salvar")); ?>" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="registro[id]" value="<?php echo $this->registro->id ?>" />
+
+                <fieldset>
+                    <legend>Dados do cliente</legend>
+                    <p>
+                        <label>Nome</label> <small class="above">Escreva o nome do cliente</small><br/>
+                        <input class="text big" type="text" value="<?php echo $this->registro->nome; ?>" name="registro[nome]"/>
+                    </p>
+                    
+                    <p>
+                        <label>Telefone 1</label><br/>
+                        <input class="text small" id="fone1" type="text" value="<?php echo $this->registro->telefone1; ?>" name="registro[telefone1]"/>
+                    </p>
+                    
+                    <p>
+                        <label>Telefone 1</label> <br/>
+                        <input class="text small" id="fone2" type="text" value="<?php echo $this->registro->telefone2; ?>" name="registro[telefone2]"/>
+                    </p>
+
+
+                    <p>
+                        <label>Observações</label> <br/>
+                        <textarea name="registro[obs]" rows="10" cols="80"><?php echo $this->registro->obs; ?></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Salvar" />
+                    </p>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -41,7 +41,7 @@
         <link href="<?php echo $this->baseUrl("ico/speed-dial.png"); ?>" rel="icon" type="image/png" />
         <link href="<?php echo $this->baseUrl("ico/apple-touch-icon-precomposed.png"); ?>" rel="apple-touch-icon-precomposed" type="image/png" />
 
-
+<!--        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>-->
 
         <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery-1.6.4.min.js"); ?>"></script>
         <script type="text/javascript" src="<?php echo $this->baseUrl("js/wrappers.js"); ?>"></script>
@@ -70,6 +70,9 @@
         <script type="text/javascript" src="<?php echo $this->baseUrl("js/fullcalendar/fullcalendar.min.js"); ?>"></script>
 
         <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery.maskMoney.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery.maskedinput-1.3.min.js"); ?>"></script>
+        
+        
         
         <script type="text/javascript" src="<?php echo $this->baseUrl("js/main.js"); ?>"></script>
 
@@ -91,9 +94,9 @@
 
                 <ul class="main-menu">
                     <li><a href="<?php echo $this->url(array("controller" => "produtos"), null, true); ?>">Produtos</a></li>
-                    <li><a href="texting.html">Clientes</a></li>
-                    <li><a href="forms.html">Pedidos</a></li>
-                    <li><a href="forms.html">Efetuar venda</a></li>
+                    <li><a href="<?php echo $this->url(array("controller"=>"clientes"),null,true); ?>">Clientes</a></li>
+                    <li><a href="<?php echo $this->url(array("controller"=>"pedidos")) ?>">Pedidos</a></li>
+                    <li><a href="<?php echo $this->url(array("controller"=>"vender")) ?>">Efetuar venda</a></li>
                 </ul>
 
                 <ul class="secondary-menu">
