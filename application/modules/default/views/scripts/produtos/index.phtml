@@ -6,7 +6,7 @@
                 <li><a href="<?php echo $this->url(array("action" => "cadastrar", "controller" => "produtos"), null, true); ?>">Adicionar produto</a></li>
             </ul>
             <form action="<?php echo $this->url(array("controller"=>"produtos","action"=>"buscar"),null,true) ?>" method="post">
-                <input type="text" value="<?php echo (empty($this->busca)) ? "Pesquisar" : $this->busca; ?>" name="busca" class="search">
+                <input type="text" value="<?php echo (empty($this->busca)) ? "" : $this->busca; ?>" name="busca" class="search">
             </form>
         </div>
         <div class="content">
@@ -35,7 +35,7 @@
                         <td><?php if ($r["ativo"] != 1) : ?><span class="no"></span><?php else: ?><span class="yes"></span><?php endif; ?></td>
                         <td><?php echo $r["produto_categoria"] ?></td>
                         <td><a class="edit" href="<?php echo $this->url(array("controller"=>"produtos","action"=>"editar","id"=>$r["id"]),null,true) ?>">editar</a>
-                            <a class="delete" href="#">deletar</a></td>
+                            <a class="delete" href="<?php echo $this->url(array("controller"=>"produtos","action"=>"deletar","id"=>$r["id"]),null,true); ?>">deletar</a></td>
                     </tr>
                     <?php
                     $cont++;
