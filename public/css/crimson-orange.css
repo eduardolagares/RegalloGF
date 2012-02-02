@@ -1,0 +1,111 @@
+/* Crimson Orange */
+.page.crimson-orange .date_selector td.selected {
+	background: #E75814;
+	color: #fff;
+	font-weight: bold;
+}
+.page.crimson-orange .date_selector td.today {
+	background: #EF814B;
+	color: #FFFFFF;
+}
+.page.crimson-orange .date_selector td.selectable.listing_day:hover,
+.page.crimson-orange .date_selector td.selectable_day.hover {
+	background: #E75814;
+}
+
+.page.crimson-orange .block .content .progress-bar .progress .ui-progressbar-value,
+.page.crimson-orange .header,
+.page.crimson-orange .header ul.secondary-menu li .search-menu .pointer,
+.page.crimson-orange .header ul.secondary-menu li .user-menu .pointer,
+.page.crimson-orange .header ul.secondary-menu li .user-menu ul.menu li.separator.iehover,
+.page.crimson-orange .header ul.secondary-menu li .user-menu ul.menu li.separator,
+.page.crimson-orange .block .top .sl,
+.page.crimson-orange .block .top .sr,
+.page.crimson-orange .block .top input.search,
+.page.crimson-orange .block .content ul.tab-header li a span.l,
+.page.crimson-orange .block .content ul.tab-header li a span.c,
+.page.crimson-orange .block .content ul.tab-header li a span.r,
+.page.crimson-orange .block .content .vertical-tabs .tab-list ul li.active,
+.page.crimson-orange .block .content .vertical-tabs .tab-list ul li.active span.arrow {
+
+	background-image: url('../img/theme-orange.png');
+}
+
+.page.crimson-orange .fc-event-skin,
+.page.iphone.crimson-orange .top-side h2,
+.page.ipad.crimson-orange .sidebar h2,
+.page.crimson-orange .block .top,
+.page.crimson-orange .block .content .actions .pager a:hover,
+.page.crimson-orange .block .content .actions .pager a.active {
+
+	background-color: #d45112;
+	background: -moz-linear-gradient(top, #e95914, #c44a10);
+	background: -o-linear-gradient(top, #e95914, #c44a10);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#e95914), color-stop(1,#c44a10));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e95914', endColorstr='#c44a10');
+}
+
+.page.crimson-orange .block .content .dataTables_wrapper .table-bottom .paging_full_numbers span.paginate_active,
+.page.iphone.crimson-orange .top-side ul.main-menu li a.touched,
+.page.ipad.crimson-orange .sidebar ul.main-menu li a.touched {
+	background-color: #d45112;
+	background: -moz-linear-gradient(top, #c44a10, #e95914);
+	background: -o-linear-gradient(top, #c44a10, #e95914);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#c44a10), color-stop(1,#e95914));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c44a10', endColorstr='#e95914');
+}
+
+
+.page.crimson-orange .block .content h1,
+.page.crimson-orange .block .content h2,
+.page.crimson-orange .block .content a {
+	color: #d45112;
+}
+.page.crimson-orange .block .content ul.menu li a:hover,
+.page.crimson-orange .block .content ul.menu li a.selected {
+
+	background-color: #AC420E;
+	background: -moz-linear-gradient(top, #AC420E, #C94D11);
+	background: -o-linear-gradient(top, #AC420E, #C94D11);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#AC420E), color-stop(1,#C94D11));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AC420E', endColorstr='#C94D11');
+}
+.page.crimson-orange .block .content ul.tab-header li a.active span.c {
+	color: #6B290A;
+}
+.page.crimson-orange .block .content .accordion .title.ui-state-active {
+
+	background-color: #e85a1c;
+	background: -moz-linear-gradient(top, #e85a1c, #c24a15);
+	background: -o-linear-gradient(top, #e85a1c, #c24a15);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#e85a1c), color-stop(1,#c24a15));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e85a1c', endColorstr='#c24a15');
+}
+.page.crimson-orange .block .content .button {
+	color: #ffede4;
+
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+	background-color: #e85a1c;
+	background: -moz-linear-gradient(top, #e85a1c, #c24a15);
+	background: -o-linear-gradient(top, #e85a1c, #c24a15);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#e85a1c), color-stop(1,#c24a15));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e85a1c', endColorstr='#c24a15');
+}
+.page.crimson-orange .block .content .button.focus span,
+.page.crimson-orange .block .content .button:focus span,
+.page.crimson-orange .block .content .button:hover span,
+.page.crimson-orange .block .content .button.hover span,
+.page.crimson-orange .block .content .button:active span,
+.page.crimson-orange .block .content .button.active span {
+	background: -moz-linear-gradient(top, #c24a15, #e85a1c);
+	background: -o-linear-gradient(top, #c24a15, #e85a1c);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#c24a15), color-stop(1,#e85a1c));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c24a15', endColorstr='#e85a1c');
+}

@@ -1,0 +1,159 @@
+div.checker,
+div.checker span,
+.page.login .block .content p div.button,
+.page.login .block .content p div.button span,
+.page .header ul.main-menu li,
+.page .header ul.main-menu li a,
+.page .header ul.secondary-menu li,
+.page .block .top ul li,
+.page .block .content ul.tab li,
+.page .block .content ul.tab li a,
+.page .block .content ul.tab li a span.l,
+.page .block .content ul.tab li a span.c,
+.page .block .content ul.tab li a span.r,
+.page .block .content label,
+.page .block .content .uploader .filename,
+.page .block .content table.listing tr td a.edit,
+.page .block .content table.listing tr td a.delete,
+.page .block .content .selector,
+.page .block .content div.actions div.pager a,
+.page .block .contentul.image-list li ul li,
+.page .block .contentul.image-list li ul li a,
+.page .block .content ul.tab-header li,
+.page .block .content ul.tab-header li a,
+.page .block .content .button,
+.page .block .content .button span,
+.page .grid .column,
+.page .header ul.secondary-menu li .search-menu .details label {
+	display: inline;
+	zoom: 1;
+}
+.page.login .block .content p input.text,
+.page.login .block .content p input.email,
+.page.login .block .content p input.password,
+.page.login .block .content p textarea.uniform {
+	border: 1px solid #cccccc;
+}
+.page.login .block .content p div.button span {
+	padding: 6px 20px 12px 20px;
+}
+.block .content .message {
+	zoom: 1;
+}
+.page.login .block .top {
+	filter: none;
+}
+body {
+	overflow: auto;
+}
+.page .block .content ul.image-list li ul,
+.page .header ul.main-menu li:hover ul li a,
+.page .header ul.main-menu li.iehover ul li a {
+	background: transparent url('../img/header-submenu-hover.png') repeat;
+}
+.page .header ul.main-menu li ul li a {
+	background: transparent url('../img/header-submenu-hover.png') repeat;
+}
+.page .header ul.main-menu li:hover ul li:hover ul li a,
+.page .header ul.main-menu li.iehover ul li.iehover ul li a {
+	background: transparent url('../img/header-submenu-hover.png') repeat;
+}
+.page .header ul.main-menu li:hover ul li:hover ul li:hover ul li a,
+.page .header ul.main-menu li.iehover ul li.iehover ul li.iehover ul li a {
+	background: transparent url('../img/header-submenu-hover.png') repeat;
+}
+.page .header ul.main-menu a:hover,
+.page .header ul.secondary-menu a:hover {
+	background: url('../img/header-menu-hover.png') repeat;
+}
+.page .header ul.main-menu li.iehover a,
+.page .header ul.secondary-menu li.iehover a {
+	background: url('../img/header-menu-hover.png') repeat;
+}
+.page .header ul.secondary-menu li .user-menu ul.menu li.iehover a,
+.page .header ul.secondary-menu li .user-menu ul.menu li a:hover {
+	background: url('../img/header-menu-hover.png') repeat;
+}
+.page .header ul li {
+	border-right: 1px solid #577a21;
+}
+.page .header ul.secondary-menu {
+	border-left: 1px solid #577a21;
+}
+.page.crimson-orange .header ul li {
+	border-right: 1px solid #b04410;
+}
+.page.crimson-orange .header ul.secondary-menu {
+	border-left: 1px solid #b04410;
+}
+.page.blue-gray .header ul li {
+	border-right: 1px solid #41555b;
+}
+.page.blue-gray .header ul.secondary-menu {
+	border-left: 1px solid #41555b;
+}
+.page.soft-blue .header ul li {
+	border-right: 1px solid #235A6F;
+}
+.page.soft-blue .header ul.secondary-menu {
+	border-left: 1px solid #235A6F;
+}
+.page.soft-red .header ul li {
+	border-right: 1px solid #6C0F10;
+}
+.page.soft-red .header ul.secondary-menu {
+	border-left: 1px solid #6C0F10;
+}
+.page .header {
+	z-index: 1;
+}
+.page .block .content .filters .low .filter,
+.page .block .content .filters .low input,
+.page .block .content .filters .low .selector,
+.page .block .content .filters .low .filter p,
+.page .wrapper {
+	zoom: 1;
+}
+.page .header ul.main-menu li ul {
+	left: 0;
+}
+.page .block .content {
+	margin-top: 120px;
+}
+.page .block .content ul.tab-header li {
+	margin-right: 3px;
+}
+.page .footer {
+	padding-bottom: 30px;
+}
+.page .footer .inner {
+	padding: 10px 30px;
+}
+.page .block .content table.listing tr.even td {
+	background: #cccccc;
+}
+.page .block .content fieldset {
+	position: relative;
+	margin-top: 15px;
+}
+.page .block .content fieldset legend {
+	position: absolute;
+	left: 10px;
+	top: -14px;
+}
+.date_selector .nav {
+	width: 17.5em;
+}
+.jdpicker_w	{
+	zoom: 1;
+}
+.page .grid .column {
+	margin: 0 0.9%;
+}
+.page .header ul.secondary-menu li .search-menu {
+	width: 400px;
+}
+.page .header ul.secondary-menu li .search-menu ul.ui-autocomplete li a:hover,
+.page .header ul.secondary-menu li .search-menu ul.ui-autocomplete li a.ui-state-hover {
+	background: url('../img/header-menu-hover.png') repeat;
+}

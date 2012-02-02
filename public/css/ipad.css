@@ -1,0 +1,346 @@
+* {
+	-webkit-box-sizing: border-box;
+}
+.page.ipad {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+.page.ipad .ipad-horizontal {
+	-webkit-box-flex: 1;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+.page.ipad .footer {
+	height: 50px;
+	margin: 0;
+}
+.page.ipad .ipad-horizontal .sidebar {
+	width: 250px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.page.ipad .ipad-horizontal .middle {
+	-webkit-box-flex: 1;
+}
+.page.ipad .ipad-horizontal .middle .inner {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-top: 15px;
+}
+.page.ipad .wrapper {
+	width: auto;
+}
+.page.ipad .block .top {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	-webkit-border-radius: 5px 5px 0 0;
+}
+.page.ipad .block.small .top {
+	position: static;
+}
+.page.ipad .block .top .sr,
+.page.ipad .block .top .sl {
+	display: none;
+}
+.page.ipad .block .content {
+	margin-top: 65px;
+}
+.page.ipad .block.no-top .content {
+	margin-top: 10px;
+}
+.page.ipad .block.small .content {
+	margin: 0;
+}
+.page.ipad .block .top h2,
+.page.ipad .block .top h1 {
+	font-size: 24px;
+}
+.page.ipad .block .top ul {
+	top: 18px;
+}
+.page.ipad .block.small .top h2,
+.page.ipad .block.small .top h1 {
+	font-size: 15px;
+}
+.page.ipad .block ul.shortcuts li {
+	float: none;
+}
+.page.ipad .block ul.shortcuts li a {
+	display: block;
+	width: auto;
+}
+.page.ipad .sidebar {
+	background: #e3e3e3;
+
+	position: relative;
+}
+.page.ipad .sidebar h2 {
+	margin: 0 0 20px 0;
+	padding: 0;
+
+	position: relative;
+	height: 50px;
+
+	background-color: #7AA935;
+	background: -moz-linear-gradient(top, #7AA935, #648E25);
+	background: -o-linear-gradient(top, #7AA935, #648E25);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#7AA935), color-stop(1,#648E25));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7AA935', endColorstr='#648E25');
+}
+.page.ipad .sidebar h2 a {
+	background: url('../img/header-logo-container.png');
+	width: 102px;
+	height: 89px;
+	text-align: center;
+
+	display: inline-block;
+
+	position: absolute;
+	top: 0;
+	left: 5px;
+
+	margin: 0;
+	padding: 0;
+}
+.page.ipad .sidebar h2 a img {
+	margin-top: 20px;
+}
+.page.ipad .sidebar ul.secondary-menu {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.page.ipad .sidebar ul.secondary-menu li {
+	position: relative;
+	float: right;
+
+	margin: 0;
+	padding: 0;
+
+	display: inline-block;
+	line-height: top;
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.page.ipad .sidebar ul.secondary-menu li a {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	line-height: top;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	position: relative;
+	text-decoration: none;
+
+	text-align: center;
+}
+.page.ipad .sidebar ul.secondary-menu li a img {
+	position: relative;
+	top: 17px;
+}
+.page.ipad .sidebar ul.secondary-menu li a span.number {
+	position: absolute;
+	right: 8px;
+	top: 10px;
+
+	line-height: 10px;
+	padding: 2px;
+	color: #643D06;
+	font-size: 9px;
+	font-style: normal;
+	font-weight: normal;
+	font-family: arial;
+
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+
+	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+	background: -moz-linear-gradient(top, #FFB653, #EE931A);
+	background: -o-linear-gradient(top, #FFB653, #EE931A);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#FFB653), color-stop(1,#EE931A));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFB653', endColorstr='#EE931A');
+}
+.page.ipad .sidebar ul.secondary-menu li .user-menu {
+	position: absolute;
+	top: 55px;
+	right: 0;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu {
+	position: absolute;
+	top: 55px;
+	right: -50px;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu .details input {
+	width: 150px;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu .details label {
+	width: 50px;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu .pointer {
+	right: 70px;
+}
+.page.ipad .footer {
+	height: 80px;
+	margin: 0;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu ul.ui-autocomplete li a {
+	padding: 8px;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu ul.ui-autocomplete li a span.category {
+	width: 65px;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu ul.ui-autocomplete li a span.label {
+	width: 135px;
+}
+.page.ipad .sidebar ul.secondary-menu li .search-menu ul.ui-autocomplete {
+	background-position: -35px 0;
+}
+.page.ipad .sidebar ul.main-menu {
+	margin: 70px 0 0 0;
+	padding: 0;
+	list-style: none;
+
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+
+	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.page.ipad .sidebar ul.main-menu li {
+	margin: 0;
+	padding: 0;
+}
+.page.ipad .sidebar ul.main-menu li a {
+	display: block;
+	font-size: 14px;
+	line-height: 15px;
+	padding: 15px;
+	text-decoration: none;
+
+	border-top: 1px solid rgba(0,0,0,0.1);
+
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 400;
+
+	color: #333333;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.page.ipad .sidebar ul.main-menu li a.touched {
+	background-color: #7AA935;
+	background: -moz-linear-gradient(top, #648E25, #7AA935);
+	background: -o-linear-gradient(top, #648E25, #7AA935);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#648E25), color-stop(1,#7AA935));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#648E25', endColorstr='#7AA935');
+
+	color: white;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+	-moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.page.ipad .sidebar ul.main-menu li ul {
+	display: none;
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	background-color: #333;
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0,#000), color-stop(1,#333));
+	list-style: none;
+}
+
+.page.ipad .sidebar ul.main-menu li ul li a.first {
+	border-radius: 5px 0 0 0;
+	box-shadow: none;
+}
+.page.ipad .sidebar ul.main-menu li ul li a.last {
+	border-radius: 0 0 0 5px;
+}
+.page.ipad .sidebar ul.main-menu li ul li ul {
+	background: none;
+	padding: 10px 0 0 10px;
+}
+
+.page.ipad .sidebar ul.main-menu li ul li a {
+	background-color: #d9d9d9;
+}
+.page.ipad .sidebar ul.main-menu li ul li ul li a {
+	background-color: #CFCFCF;
+}
+.page.ipad .sidebar ul.main-menu li ul li ul li ul li a {
+	background-color: #c9c9c9;
+}
+.page.ipad .sidebar ul.main-menu li ul li ul li ul li a {
+	background-color: #bfbfbf;
+}
+
+.page.ipad .block .content .button {
+	height: 38px
+}
+
+.page.ipad .block .content .button span {
+	height: 36px;
+}
+
+.page.ipad .block .content .button.green span,
+.page.ipad .block .content .button.yellow span,
+.page.ipad .block .content .button.red span {
+	height: 34px;
+}
+
+.page.ipad .block .content .progress-bar {
+	height:34px;
+}
+
+
+.page.ipad .block .content ul.tab-header li a span.c {
+	height: 40px;
+}
+
+.page.ipad .block .content table.listing tr td a.edit {
+	height: 22px;
+}
+
+.page.ipad .block .content table.listing tr td a.delete {
+	height:22px;
+}
+.page.ipad .block .top input.search {
+	height:27px;
+}
+.page.ipad .block .content .dataTables_wrapper .table-top .dataTables_length .selector {
+	width: 70px;
+}
+.page.ipad .block .content .dataTables_wrapper .table-top .dataTables_length .selector {
+	width: 70px;
+}
+.page.ipad .block .content .dataTables_wrapper .table-bottom .paging_full_numbers span.paginate_button,
+.page.ipad .block .content .dataTables_wrapper .table-bottom .paging_full_numbers span.paginate_active {
+	padding: 10px 15px;
+}
+.page.ipad .block .content .dataTables_wrapper .table-bottom .paging_full_numbers {
+	width: 500px;
+}
+.page.ipad .block .content .dataTables_wrapper .table-bottom .dataTables_info {
+	width: 100px;
+}

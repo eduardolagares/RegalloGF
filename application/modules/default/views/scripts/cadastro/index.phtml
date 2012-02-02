@@ -1,0 +1,154 @@
+<?php $this->headScript()->appendFile($this->baseUrl("js/jquery-validation-1.9.0/jquery.validate.js"),"text/javascript"); ?>
+<?php $this->headScript()->appendFile($this->baseUrl("js/jquery-validation-1.9.0/localization/messages_ptbr.js"),"text/javascript"); ?>
+<?php $this->headScript()->appendFile($this->baseUrl("js/cadastro.js"),"text/javascript"); ?>
+
+
+<!-- start middle -->
+<div class="middle">
+    <!-- start inner -->
+    <div class="inner">
+        <!--  []  -->
+        <div class="full-width">
+            <div class="two-third">
+                <h1><?php echo $this->translate("Cadastre-se"); ?></h1>
+                <h4 class="mb20"><?php echo $this->translate("Cadastre-se para utilizar o asteroid."); ?></h4>
+                <p>Apos concluir este cadastro, você receberá um e-mail, confirmando seu cadastro, a partir dai, você poderá cadastrar seus dispositivos móveis e acessar o ambiente de rastreamento e monitoramento.</p>
+                <form id="form_cadastro" action="<?php echo $this->baseUrl("/cadastro/salvar") ?>" method="post">
+
+
+                    <?php if ($this->erro): ?>
+                        <span class="msg_error"><?php echo $this->erro ?></span>
+                    <?php endif; ?>
+
+                        <h4><?php echo $this->translate("Dados pessoais:") ?></h4><hr/>
+                        <ol class="forms">
+                            <li>
+                                <label><?php echo $this->translate("Nome"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="nome" name="cliente[nome]" style="width: 600px;"/>
+                            </li>
+
+                            <li>
+                                <label><?php echo $this->translate("Contato"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="contato" name="cliente[contato]" style="width: 600px;"/>
+                            </li>
+
+                            <li>
+                                <label><?php echo $this->translate("E-mail"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required email" id="email" name="cliente[email]" style="width: 600px;"/>
+                            </li>
+
+                            <li>
+                                <label><?php echo $this->translate("Confirme o e-mail"); ?> <span class="required">*</span></label>
+                                <input type="text"class="required email"  id="confirma_email" name="confirma[email]" style="width: 600px;"/>
+                            </li>
+
+                            <li style="padding-right: 20px;">
+                                <label><?php echo $this->translate("CPF / CNPJ"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="cnpj_cpf" name="cliente[cnpj_cpf]" style="width: 280px;"/>
+                            </li>
+
+                            <li>
+                                <label><?php echo $this->translate("Telefone"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="telefone1" name="cliente[telefone1]" style="width: 280px;"/>
+                            </li>
+                            <li>
+                                <label><?php echo $this->translate("Telefone auxiliar"); ?> </label>
+                                <input type="text" id="telefone2" name="cliente[telefone2]" style="width: 280px;"/>
+                            </li>
+                            <li style="clear: both; padding-right: 20px;">
+                                <label><?php echo $this->translate("Senha"); ?> <span class="required">*</span></label>
+                                <input type="password" class="required" id="senha" name="cliente[senha]" style="width: 280px;" />
+                            </li>
+
+                            <li>
+                                <label><?php echo $this->translate("Confirme a senha"); ?> <span class="required">*</span></label>
+                                <input type="password" class="required" id="confirma_senha" name="confirma[senha]" style="width: 280px;" />
+                            </li>
+
+
+                            <div class="clear"></div>
+                        </ol>
+                        <h4><?php echo $this->translate("Endereço") ?></h4><hr/>
+                        <ol class="forms">
+                            <li>
+                                <label><?php echo $this->translate("CEP"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="endereco_cep" name="endereco[cep]" style="width: 600px;" />
+                            </li>
+                            <li>
+                                <label><?php echo $this->translate("UF"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="endereco_estado" name="endereco[estado]" style="width: 50px;" />
+                            </li>
+                            <li>
+                                <label><?php echo $this->translate("Cidade"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="endereco_cidade" name="endereco[cidade]" style="width: 280px;" />
+                            </li>
+                            <li>
+                                <label><?php echo $this->translate("Número"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="endereco_numero" name="endereco[numero]" style="width: 280px;" />
+                            </li>
+                            <li>
+                                <label><?php echo $this->translate("Bairro"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="endereco_bairro" name="endereco[bairro]" style="width: 280px;" />
+                            </li>
+                            <li>
+                                <label><?php echo $this->translate("Logradouro"); ?> <span class="required">*</span></label>
+                                <input type="text" class="required" id="endereco_logradouro" name="endereco[logradouro]" style="width: 600px;" />
+                            </li>
+                            <li>
+                                <label><?php echo $this->translate("Complemento"); ?> </label>
+                                <input type="text" id="endereco_complemento" name="endereco[complemento]" style="width: 600px;" />
+                            </li>
+                            <div class="clear"></div>
+                        </ol>
+                    </fieldset>
+
+                    <div class="form-button-left">
+                        <button type="submit" class="form-button">
+                            <span><?php echo $this->translate("Salvar"); ?></span>
+                        </button>
+                    </div>
+                </form>
+
+
+
+
+
+
+            </div>
+            <div class="one-third">
+                <div class="outer-box">
+                    <div class="inner-box-filled-grey clearfix">
+                        <div class="icon-to-left"><img src="<?php echo $this->baseUrl("images/icons/key.png"); ?>" width="24" height="24" alt="" /></div>
+                        <h3><?php echo $this->translate("Ajuda"); ?></h3>
+                        <p>Pellentesque tincidunt eleifend ultricies. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <ol>
+                            <li>Pellentesque tincidunt eleifend</li>
+                            <li>Ultricies um sociis natoque penatibus</li>
+                            <li>Et magnis dis parturient montes</li>
+                            <li>Ascetur ridiculus mus</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="outer-rounded-box">
+                    <div class="inner-rounded-box-filled-grey clearfix">
+                        <div class="icon-to-left"><img src="<?php echo $this->baseUrl("images/icons/network.png"); ?>" width="24" height="24" alt="" /></div>
+                        <h3>Or Rounded Box There</h3>
+                        <p>Pellentesque tincidunt eleifend ultricies. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <ul>
+                            <li>Pellentesque tincidunt eleifend</li>
+                            <li>Ultricies um sociis natoque penatibus</li>
+                            <li>Et magnis dis parturient montes</li>
+                            <li>Ascetur ridiculus mus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+
+    </div>
+    <!-- end inner -->
+</div>
+<!-- end middle -->
+

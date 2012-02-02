@@ -1,0 +1,55 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Produtos</h2>
+            <ul>
+                <li><a href="<?php echo $this->url(array("action" => "cadastrar", "controller" => "produtos"), null, true); ?>">Adicionar produto</a></li>
+            </ul>
+            <form action="<?php echo $this->url(array("controller"=>"produtos","action"=>"buscar"),null,true) ?>" method="post">
+                <input type="text" value="<?php echo (empty($this->busca)) ? "Pesquisar" : $this->busca; ?>" name="busca" class="search">
+            </form>
+        </div>
+        <div class="content">
+            <table class="listing" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <th width="100">Foto</th>
+                    <th>Nome</th>
+                    <th>Cod.</th>
+                    <th>Estoque</th>
+                    <th>Ativo</th>
+                    <th>Categoria</th>
+                    <th></th>
+                </tr>
+
+                <?php $cont = 0;
+                foreach ($this->registros as $r): ?>
+                    <tr <?php echo ($cont % 2 == 0) ? "class='even'" : ""; ?>>
+                        <td><?php
+                if (!empty($r["foto"])) {
+                    echo "<img height='70' src='" . $this->baseUrl("img/foto_produto/" . $r["foto"]) . "' />";
+                }
+                    ?></td>
+                        <td><?php echo $r["nome"]; ?></td>
+                        <td><?php echo $r["cod"]; ?></td>
+                        <td><?php echo $r["estoque"]; ?></td>
+                        <td><?php if ($r["ativo"] != 1) : ?><span class="no"></span><?php else: ?><span class="yes"></span><?php endif; ?></td>
+                        <td><?php echo $r["produto_categoria"] ?></td>
+                        <td><a class="edit" href="<?php echo $this->url(array("controller"=>"produtos","action"=>"editar","id"=>$r["id"]),null,true) ?>">editar</a>
+                            <a class="delete" href="#">deletar</a></td>
+                    </tr>
+                    <?php
+                    $cont++;
+                endforeach;
+                ?>
+            </table>
+            <div class="actions">
+                <?php
+                echo $this->paginationControl($this->registros, 'Sliding', 'paginator.phtml');
+                ?>
+
+                <div class="clear">&nbsp;</div>
+            </div>
+        </div>
+
+    </div>
+</div>

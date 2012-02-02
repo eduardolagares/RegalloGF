@@ -1,0 +1,198 @@
+/* Soft Blue */
+.page.soft-blue .date_selector td.selected {
+	background: #2D768B;
+	color: #fff;
+	font-weight: bold;
+}
+.page.soft-blue .date_selector td.today {
+	background: #5CB3CB;
+	color: #2D768B;
+}
+.page.soft-blue .date_selector td.selectable.listing_day:hover,
+.page.soft-blue .date_selector td.selectable_day.hover {
+	background: #2D768B;
+}
+.page.soft-blue .block .content .progress-bar .progress .ui-progressbar-value,
+.page.soft-blue .header,
+.page.soft-blue .header ul.secondary-menu li .search-menu .pointer,
+.page.soft-blue .header ul.secondary-menu li .user-menu .pointer,
+
+.page.iphone.soft-blue .top-side ul.secondary-menu li .search-menu .pointer,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu .pointer,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu ul.menu li.separator.iehover,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu ul.menu li.separator,
+
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .search-menu .pointer,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu .pointer,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu ul.menu li.separator.iehover,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu ul.menu li.separator,
+
+.page.soft-blue .header ul.secondary-menu li .user-menu ul.menu li.separator.iehover,
+.page.soft-blue .header ul.secondary-menu li .user-menu ul.menu li.separator,
+.page.soft-blue .block .top .sl,
+.page.soft-blue .block .top .sr,
+.page.soft-blue .block .top input.search,
+.page.soft-blue .block .content ul.tab-header li a span.l,
+.page.soft-blue .block .content ul.tab-header li a span.c,
+.page.soft-blue .block .content ul.tab-header li a span.r,
+.page.soft-blue .block .content .vertical-tabs .tab-list ul li.active,
+.page.soft-blue .block .content .vertical-tabs .tab-list ul li.active span.arrow {
+
+	background-image: url('../img/theme-blue.png');
+}
+
+.page.soft-blue .fc-event-skin,
+.page.iphone.soft-blue .top-side h2,
+.page.ipad.soft-blue .sidebar h2,
+.page.soft-blue .block .top,
+.page.soft-blue .block .content .actions .pager a:hover,
+.page.soft-blue .block .content .actions .pager a.active {
+
+	background-color: #3d99b5;
+	background: -moz-linear-gradient(top, #3d99b5, #338198);
+	background: -o-linear-gradient(top, #3d99b5, #338198);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#3d99b5), color-stop(1,#338198));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d99b5', endColorstr='#338198');
+}
+
+.page.soft-blue .block .content .dataTables_wrapper .table-bottom .paging_full_numbers span.paginate_active,
+.page.iphone.soft-blue .top-side ul.main-menu li a.touched,
+.page.ipad.soft-blue .sidebar ul.main-menu li a.touched {
+	background-color: #3d99b5;
+	background: -moz-linear-gradient(top, #338198, #3d99b5);
+	background: -o-linear-gradient(top, #338198, #3d99b5);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#338198), color-stop(1,#3d99b5));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#338198', endColorstr='#3d99b5');
+
+}
+
+.page.soft-blue .block .content h1,
+.page.soft-blue .block .content h2,
+.page.soft-blue .block .content a {
+	color: #2D768A;
+}
+.page.soft-blue .block .content ul.menu li a:hover,
+.page.soft-blue .block .content ul.menu li a.selected {
+
+	background-color: #2D7285;
+	background: -moz-linear-gradient(top, #2D7285, #338097);
+	background: -o-linear-gradient(top, #2D7285, #338097);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#2D7285), color-stop(1,#338097));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2D7285', endColorstr='#338097');
+}
+.page.soft-blue .block .content ul.tab-header li a.active span.c {
+	color: #162C32;
+}
+.page.soft-blue .block .content .accordion .title.ui-state-active {
+
+	background-color: #429ab2;
+	background: -moz-linear-gradient(top, #429ab2, #38849b);
+	background: -o-linear-gradient(top, #429ab2, #38849b);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#429ab2), color-stop(1,#38849b));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#429ab2', endColorstr='#38849b');
+}
+.page.soft-blue .block .content .button {
+	color: #e0f8ff;
+
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+
+	background-color: #3d99b5;
+	background: -moz-linear-gradient(top, #3d99b5, #338198);
+	background: -o-linear-gradient(top, #3d99b5, #338198);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#3d99b5), color-stop(1,#338198));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d99b5', endColorstr='#338198');
+}
+.page.soft-blue .block .content .button.focus span,
+.page.soft-blue .block .content .button:focus span,
+.page.soft-blue .block .content .button:hover span,
+.page.soft-blue .block .content .button.hover span,
+.page.soft-blue .block .content .button:active span,
+.page.soft-blue .block .content .button.active span {
+	background: -moz-linear-gradient(top, #338198, #3d99b5);
+	background: -o-linear-gradient(top, #338198, #3d99b5);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#338198), color-stop(1,#3d99b5));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#338198', endColorstr='#3d99b5');
+}
+
+
+/* Gray menu */
+.page.iphone.soft-blue .top-side ul.secondary-menu li .search-menu .details,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu .details,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .search-menu .details,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu .details,
+.page.soft-blue .header ul.secondary-menu li .search-menu .details,
+.page.soft-blue .header ul.secondary-menu li .user-menu .details {
+	border-bottom: 1px solid #dfdfdf;
+
+	background-color: #FBFBFB;
+	background: -moz-linear-gradient(top, #FBFBFB, #E3E3E3);
+	background: -o-linear-gradient(top, #FBFBFB, #E3E3E3);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#FBFBFB), color-stop(1,#E3E3E3));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#E3E3E3');
+}
+.page.iphone.soft-blue .top-side ul.secondary-menu li .search-menu .details label,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .search-menu .details label,
+.page.soft-blue .header ul.secondary-menu li .search-menu .details label {
+	color: #444444;
+}
+
+.page.iphone.soft-blue .top-side ul.secondary-menu li .search-menu .details input,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu .details .image,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .search-menu .details input,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu .details .image,
+.page.soft-blue .header ul.secondary-menu li .search-menu .details input,
+.page.soft-blue .header ul.secondary-menu li .user-menu .details .image {
+	border: 1px solid #cccccc;
+}
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu ul.menu,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu ul.menu,
+.page.soft-blue .header ul.secondary-menu li .user-menu ul.menu {
+	background-color: #FBFBFB;
+	background: -moz-linear-gradient(top, #FBFBFB, #E3E3E3);
+	background: -o-linear-gradient(top, #FBFBFB, #E3E3E3);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0,#FBFBFB), color-stop(1,#E3E3E3));
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBFBFB', endColorstr='#E3E3E3');
+}
+
+
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu ul.menu li.iehover a,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu ul.menu li a,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu .details .info h3,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu .details .info h3 a,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu .details .info ul li,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu .details .info ul li a,
+
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu ul.menu li.iehover a,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu ul.menu li a,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu .details .info h3,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu .details .info h3 a,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu .details .info ul li,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu .details .info ul li a,
+
+.page.soft-blue .header ul.secondary-menu li .user-menu ul.menu li.iehover a,
+.page.soft-blue .header ul.secondary-menu li .user-menu ul.menu li a,
+.page.soft-blue .header ul.secondary-menu li .user-menu .details .info h3,
+.page.soft-blue .header ul.secondary-menu li .user-menu .details .info h3 a,
+.page.soft-blue .header ul.secondary-menu li .user-menu .details .info ul li,
+.page.soft-blue .header ul.secondary-menu li .user-menu .details .info ul li a {
+	color: #444444;
+}
+
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu ul.menu li.iehover a,
+.page.iphone.soft-blue .top-side ul.secondary-menu li .user-menu ul.menu li a:hover,
+
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu ul.menu li.iehover a,
+.page.ipad.soft-blue .sidebar ul.secondary-menu li .user-menu ul.menu li a:hover,
+
+.page.soft-blue .header ul.secondary-menu li .user-menu ul.menu li.iehover a,
+.page.soft-blue .header ul.secondary-menu li .user-menu ul.menu li a:hover {
+	color: white;
+}

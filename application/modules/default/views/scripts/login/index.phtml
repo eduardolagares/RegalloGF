@@ -1,0 +1,58 @@
+<div class="page login">
+    <h1>
+        <!-- Logo -->
+        <img src="img/_white-logo.png" alt="mbeAdmin" />
+        <!-- End Logo -->
+    </h1>
+
+    <div class="block">
+        <div class="top">
+
+            <h2>Login</h2>
+
+            <!--            <a href="#">Go to website</a>-->
+
+        </div>
+        <div class="content">
+
+            <form action="<?php echo $this->url(array("controller" => "login", "action" => "logar")); ?>" method="post" id="login-form">
+
+                <!--                <div class="message info">
+                                    To login <b>enter something in the boxes</b>.
+                                </div>-->
+
+                <p>
+                    <label>Login</label><br/>
+                    <input type="text" name="login" value="" />
+                </p>
+                <p>
+                    <small class="right"><a href="#forgot-form" class="forgot-link">Esqueceu sua senha?</a></small>
+                    <label>Senha</label><br/>
+                    <input type="password" name="senha" value="" />
+                </p>
+                <p>
+                    <input type="submit" value="Entrar" />
+                    <label class="remember">
+                        <input type="checkbox" name="remember_me" value="1" />
+                        Lembrar minha senha
+                    </label>
+                </p>
+
+            </form>
+
+            <form action="dashboard.php" method="post" id="forgot-form" style="display: none">
+
+                <p>
+                    <label>E-mail</label><br/>
+                    <input type="text" name="email" value="" />
+                </p>
+                <p>
+                    <input type="submit" value="Recuperar Senha" /> <input type="button" value="Voltar ao login" class="login-link light" />
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

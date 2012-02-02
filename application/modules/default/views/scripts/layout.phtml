@@ -1,0 +1,143 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+    <head profile="http://gmpg.org/xfn/11">
+
+        <title>Regallo - Gerenciador Financeiro</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--        <meta name="keywords" content="Asteroid, XHTML, HTML, Theme, Template" />-->
+        <meta name="description" content="Asteroid" />
+
+        <link rel="shortcut icon" href="<?php echo $this->baseUrl("images/icons/favicon.ico"); ?>" type="image/x-icon" />
+
+
+        <style type="text/css" media="all">
+            @import url("http://fonts.googleapis.com/css?family=Lato:400,700,400italic|PT+Sans+Narrow:400,700");
+
+            @import url("<?php echo $this->baseUrl("js/jwysiwyg/jquery.wysiwyg.css"); ?>");
+            @import url("<?php echo $this->baseUrl("js/fancybox/jquery.fancybox-1.3.4.css"); ?>");
+            @import url("<?php echo $this->baseUrl("js/jdpicker/jdpicker.css"); ?>");
+            @import url("<?php echo $this->baseUrl("js/visualize/css/visualize.css"); ?>");
+            @import url("<?php echo $this->baseUrl("js/fullcalendar/fullcalendar.css"); ?>");
+            @import url("<?php echo $this->baseUrl("css/datatable.css"); ?>");
+
+            @import url("<?php echo $this->baseUrl("css/style.css"); ?>");
+
+            @import url("<?php echo $this->baseUrl("css/crimson-orange.css"); ?>");
+            @import url("<?php echo $this->baseUrl("css/soft-blue.css"); ?>");
+            @import url("<?php echo $this->baseUrl("css/soft-red.css"); ?>");
+            @import url("<?php echo $this->baseUrl("css/soft-purple.css"); ?>");
+            @import url("<?php echo $this->baseUrl("css/soft-yellow.css"); ?>");
+            @import url("<?php echo $this->baseUrl("css/blue-gray.css"); ?>");
+        </style>
+
+        <!--[if IE]>
+                        <link rel="stylesheet" type="text/css" href="css/ie.css" />
+                <![endif]-->
+
+        <!-- Icons -->
+        <link href="<?php echo $this->baseUrl("ico/favicon.ico"); ?>" rel="icon" type="image/ico" />
+        <link href="<?php echo $this->baseUrl("ico/favicon.ico"); ?>" rel="shortcut icon" type="image/ico" />
+        <link href="<?php echo $this->baseUrl("ico/speed-dial.png"); ?>" rel="apple-touch-icon" type="image/png" />
+        <link href="<?php echo $this->baseUrl("ico/speed-dial.png"); ?>" rel="icon" type="image/png" />
+        <link href="<?php echo $this->baseUrl("ico/apple-touch-icon-precomposed.png"); ?>" rel="apple-touch-icon-precomposed" type="image/png" />
+
+
+
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery-1.6.4.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/wrappers.js"); ?>"></script>
+
+
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery-ui-1.8.16.custom.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery.uniform/jquery.uniform.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery-css-transform.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/rotate3Di.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jwysiwyg/jquery.wysiwyg.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jdpicker/jquery.jdpicker.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery.hotkeys.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/tap-or-click.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery.datatable/js/jquery.dataTables.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery-validation-1.8.1/jquery.validate.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery.detectmobilebrowser.js"); ?>"></script>
+
+        <!--[if IE]>
+                <script type="text/javascript" src="js/excanvas.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/visualize/visualize.jQuery.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/visualize/jquery.visualize.tooltip.js"); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/fancybox/jquery.fancybox-1.3.4.pack.js"); ?>"></script>
+
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/fullcalendar/fullcalendar.min.js"); ?>"></script>
+
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/jquery.maskMoney.js"); ?>"></script>
+        
+        <script type="text/javascript" src="<?php echo $this->baseUrl("js/main.js"); ?>"></script>
+
+
+        <?php echo $this->headScript() ?>
+        <?php echo $this->headLink() ?>
+
+
+    </head>
+    <body>
+        <div class="page soft-yellow">
+            <div class="header">
+
+                <h2>
+                    <a href="dashboard.html">
+                        <img src="<?php echo $this->baseUrl("img/_black-logo.png"); ?>" alt="Logo" />
+                    </a>
+                </h2>
+
+                <ul class="main-menu">
+                    <li><a href="<?php echo $this->url(array("controller" => "produtos"), null, true); ?>">Produtos</a></li>
+                    <li><a href="texting.html">Clientes</a></li>
+                    <li><a href="forms.html">Pedidos</a></li>
+                    <li><a href="forms.html">Efetuar venda</a></li>
+                </ul>
+
+                <ul class="secondary-menu">
+                    <li>
+                        <a href="" class="user-menu-link">
+                            <img src="<?php echo $this->baseUrl("img/header-menu-user.png") ?>" alt="" />
+<!--                            <span class="number">25</span>-->
+                        </a>
+                        <div class="user-menu">
+                            <div class="details">
+                                <div class="image">
+                                    &nbsp;
+                                </div>
+                                <div class="info">
+                                    <h3><a href=""><?php echo $this->usuario->nome; ?></a></h3>
+                                    <ul>
+                                        <li class="email"><a href=""><?php echo $this->usuario->email; ?></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="menu">
+                                <li><a href="#">Editar meus dados</a></li>
+                                <li><a href="index.html">Sair</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="middle grid">
+                <?php echo $this->flashMessages(); ?>
+                <?php echo $this->layout()->content; ?>
+                <div class="clear">&nbsp;</div>
+            </div>
+
+            <div class="footer">
+                <div class="left">
+                    Teste
+                </div>
+                <div class="right">
+                    <a href="http://www.mbe.ro">powered by mbe.ro</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

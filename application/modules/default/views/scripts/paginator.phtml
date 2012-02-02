@@ -1,0 +1,26 @@
+<?php if ($this->pageCount): ?>
+
+    <div class="pager">
+        <?php if (isset($this->previous)): ?>
+            <a href="<?php echo $this->url(array("page" => $this->previous)); ?>"><</a>
+        <?php endif; ?>
+
+
+        <?php foreach ($this->pagesInRange as $page): ?>
+            <?php $class = ($page == $this->current) ? 'class="active"' : '';  ?>
+            <a <?php echo $class; ?> href="<?php echo $this->url(array('page' => $page)) ?>"><?php echo $page; ?></a>
+        <?php endforeach; ?>
+            
+           <?php if (isset($this->next)): ?>
+            <a href="<?php echo $this->url(array("page" => $this->next)); ?>">></a>
+        <?php endif; ?>
+
+        <br/>
+        <label><b><?php echo $this->currentItemCount ?></b> de <b><?php echo $this->totalItemCount ?></b></label>
+    </div>
+
+
+<?php endif; ?>
+<div class="total">
+                    <b><?php echo $this->totalItemCount ?></b> Iten(s) encontrado(s)
+                </div>
