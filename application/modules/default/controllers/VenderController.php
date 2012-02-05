@@ -6,6 +6,11 @@ class Default_VenderController extends Zend_Controller_Action {
         parent::init();
     }
 
+    public function buscarAction() {
+        $busca = $this->getRequest()->getParam("busca");
+        $this->_redirect("/vender/pedidos/busca/" . $busca);
+    }
+
     public function indexAction() {
         $dbC = new DbTable_Cliente();
         $this->view->clientes = $dbC->fetchAll();
@@ -31,7 +36,7 @@ class Default_VenderController extends Zend_Controller_Action {
         $valorItens = 0;
         foreach ($itens as $i) {
             if ($i["quantidade"] > 0) {
-                $valorItens+=$v;
+                $valorItens+=$i["valor"];
             }
         }
 
@@ -73,7 +78,7 @@ class Default_VenderController extends Zend_Controller_Action {
         }
 
 
-
+        $numeroParcelasPagas = 0;
         foreach ($parcelas as $parcela) {
             $d = new Zend_Date($parcela["data"]);
             $valor = str_replace(".", "", $parcela["valor"]);
@@ -86,23 +91,56 @@ class Default_VenderController extends Zend_Controller_Action {
                 "paga" => isset($parcela["paga"]) ? 1 : 0
             );
 
+            if ($dadosParcela["paga"] == 1) {
+                $numeroParcelasPagas++;
+            }
+
             $dbParcela->insert($dadosParcela);
         }
 
 
+        if (count($parcelas) == $numeroParcelasPagas) {
+            $dbPedido->update(array("status" => "pago"), "id = " . $pedidoId);
+        }
 
 
         $this->_helper->FlashMessenger(
                 array('success' => "Venda efetuada com sucesso!")
         );
-        
-        
+
+
         $this->_redirect("/vender/pedidos");
 
 
 
         $this->_helper->viewRenderer->setNoRender();
         Zend_Layout::getMvcInstance()->disableLayout();
+    }
+
+    public function pedidosAction() {
+        $dbP = new DbTable_Pedido();
+        $page = $this->getRequest()->getParam("page", 1);
+        $this->view->busca = $this->getRequest()->getParam("busca", "");
+
+        $sub1 = new Zend_Db_Expr("(SELECT SUM(pi.quantidade) FROM pedido_item as pi WHERE pi.pedido_id = p.id )");
+
+        $q = $dbP->select()
+                ->setIntegrityCheck(false)
+                ->from(array("p" => "pedido"), array("p.*", "quantidade" => $sub1))
+                ->joinInner(array("c" => "cliente"), "c.id = p.cliente_id", array("cliente_nome" => "c.nome"))
+        ;
+
+        if (!empty($this->view->busca)) {
+            $q->where("p.id = ?",$this->view->busca);
+//            $q->where("p.id LIKE(?)", "%" . $this->view->busca . "%");
+        }
+
+
+        $pager = new Zend_Paginator(new Zend_Paginator_Adapter_DbSelect($q));
+        $pager->setCurrentPageNumber($page);
+        $pager->setItemCountPerPage(10);
+
+        $this->view->registros = $pager;
     }
 
 }
