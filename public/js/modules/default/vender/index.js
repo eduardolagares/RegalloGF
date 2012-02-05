@@ -100,10 +100,10 @@ $(document).ready(function(){
             v+= moneyToNumber($(item).val());
         });
        
-       if(valor_total.toFixed(2) != v) {
-           alert("Suas parcelas não estão batendo com o valor final da compra");
-           return false;
-       }
+        if(valor_total.toFixed(2) != v) {
+            alert("Suas parcelas não estão batendo com o valor final da compra");
+            return false;
+        }
        
         var nao_enviar = false;
         $("#pagamento .parcela input.date").each(function(index,item){
@@ -128,8 +128,6 @@ $(document).ready(function(){
             alert("Preecha todos as informações para cada parcela.");
             return false;
         }
-        
-        return false;
     });
     
     
