@@ -16,7 +16,7 @@ class Default_VenderController extends Zend_Controller_Action {
         $this->view->clientes = $dbC->fetchAll();
 
         $dbP = new DbTable_Produto();
-        $this->view->produtos = $dbP->fetchAll("estoque > 0");
+        $this->view->produtos = $dbP->fetchAll("estoque > 0 && deletado != 1");
     }
 
     public function addParcelaAction() {
