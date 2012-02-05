@@ -95,8 +95,8 @@
                 <ul class="main-menu">
                     <li><a href="<?php echo $this->url(array("controller" => "produtos"), null, true); ?>">Produtos</a></li>
                     <li><a href="<?php echo $this->url(array("controller"=>"clientes"),null,true); ?>">Clientes</a></li>
-                    <li><a href="<?php echo $this->url(array("controller"=>"pedidos")) ?>">Pedidos</a></li>
-                    <li><a href="<?php echo $this->url(array("controller"=>"vender")) ?>">Efetuar venda</a></li>
+                    <li><a href="<?php echo $this->url(array("controller"=>"vender","action"=>"pedidos"),null,true) ?>">Pedidos</a></li>
+                    <li><a href="<?php echo $this->url(array("controller"=>"vender"),null,true) ?>">Efetuar venda</a></li>
                 </ul>
 
                 <ul class="secondary-menu">

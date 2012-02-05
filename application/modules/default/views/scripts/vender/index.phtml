@@ -1,46 +1,76 @@
-<div class="column grid-16">
+
+<input type="hidden" id="url_add_parcela" value="<?php echo $this->url(array("controller" => "vender", "action" => "add-parcela")); ?>" />
+<?php 
+
+    $this->headScript()->appendFile($this->baseUrl("/js/modules/default/vender/index.js")); 
+    $this->headLink()->appendStylesheet($this->baseUrl("css/custom.css"));
+?>
+<div class="column grid-16" id="vender_index">
     <div class="block">
         <div class="top">
             <h2>Vender</h2>
 
         </div>
         <div class="content">
-            <form action="<?php echo $this->url(array("controller" => "vender", "action" => "salvarPedido")); ?>" method="post" enctype="multipart/form-data">
-                <!--                <fieldset>-->
-                <!--                    <legend>Escolha o cliente</legend>
-                                </fieldset>-->
+            <form action="<?php echo $this->url(array("controller" => "vender", "action" => "salvar-pedido")); ?>" method="post" enctype="multipart/form-data">
                 <p>
                     <label>Selecione o cliente</label><br/>
                     <select name="registro[cliente_id]">
-                        <?php foreach ($this->clientes as $c): ?>
-                            <option value="<?php echo $c->id ?>"><?php echo $c->nome ?></option>
+                        <?php $cont = 0;
+                        foreach ($this->clientes as $c): ?>
+                            <?php $check = ($cont == 0) ? "selected='selected'" : "";
+                            $cont++; ?>
+                            <option  <?php echo $check; ?>value="<?php echo $c->id ?>"><?php echo $c->nome ?></option>
                         <?php endforeach; ?>
                     </select>
+
+                    <input type="button" class="button red" value="Cadastrar cliente" />
 
 
                 </p>
 
                 <fieldset>
                     <legend>Produtos</legend>
-                    <ul class="image-list" rel="sortable_result">
-                        <?php for($i=0;$i<10;$i++): ?>
-                        <li id="Image1">
-                            <a href="img/_photo.jpg" class="fancybox"><img src="img/_thumb.jpg" alt="thumb"/></a>
-                            <span class="move">&nbsp;</span>
-                            <ul>
-                                <li class="edit"><a href="#">Alterar</a></li>
-                                <li class="delete"><a class="delete" href="#">Deletar</a></li>
-                            </ul>
-                        </li>
-                        <?php endfor; ?>
+                    <ul id="produtos">
+                        <?php $cont = 0;
+                        foreach ($this->produtos as $p): ?>
+                            <li >
+                                <a href="#"><img src="img/foto_produto/<?php echo $p->foto; ?>" /></a><br/>
+                                <div class="valor" valor="<?php echo $p->valor_venda; ?>"><?php echo $this->MoneyFormat($p->valor_venda); ?></div>
+                                <div>
+                                    <button type="button" class="remover_quantidade">-</button>
+                                    <span class="quantidade">0</span>
+                                    <input type="hidden" estoque="<?php echo $p->estoque ?>" class="quantidade" name="registro[itens][<?php echo $cont; ?>][quantidade]" value="0" style="width: 10px;" class="text small" /> 
+                                    <input type="hidden" name="registro[itens][<?php echo $cont; ?>][id]" value="<?php echo $p->id ?>" />
+                                    <input type="hidden" name="registro[itens][<?php echo $cont ?>][valor]" value="<?php echo $p->valor_venda; ?>" />
+                                    <button class="adicionar_quantidade" type="button">+</button>
+                                    de <?php echo $p->estoque ?>
+                                </div>
+
+
+                            </li>
+    <?php $cont++;
+endforeach; ?>
 
                     </ul>
                 </fieldset>
 
                 <fieldset>
-                    <legend>Forma de pagamento</legend>
-                </fieldset>
+                    <legend>Pagamento</legend>
+                    <div>
+                        <div id="painel"> 
+                            Valor: R$ <span style="font-size: 2em;" id="valor_total">0,00</span><br/>
+                            Valor do desconto: <input id="valor_desconto" name="registro[desconto]" class="moeda" type="text" style="width: 100px;" value="0,00" /><br/>
+                            Valor Total com desconto: R$ <span style="font-size: 2em;" id="valor_total_com_desconto">0,00</span>
 
+                        </div><br/>
+                        <div id="pagamento">
+                        </div>
+                    </div>
+                    <div class="clear"></div><br/>
+                    <input type="button" id="btn_adicionar_parcela" class="button small" value="Adiconar parcela" />
+                </fieldset>
+                <input type="submit" id="btn_vender" value="VENDER" />
             </form>
         </div>
 
