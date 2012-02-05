@@ -1,0 +1,57 @@
+<div class="column grid-16">
+    <div class="block">
+        <div class="top">
+            <h2>Pedidos</h2>
+            <ul>
+                <li><a href="<?php echo $this->url(array("action" => "cadastrar", "controller" => "vender"), null, true); ?>">Efetuar venda</a></li>
+            </ul>
+            <form action="<?php echo $this->url(array("controller" => "vender", "action" => "buscar"), null, true) ?>" method="post">
+                <input type="text" value="<?php echo (empty($this->busca)) ? "" : $this->busca; ?>" name="busca" class="search">
+            </form>
+        </div>
+        <div class="content">
+            <table class="listing" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <th width="20">Id</th>
+                    <th>Cliente</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                </tr>
+
+                <?php $cont = 0;
+                foreach ($this->registros as $r): ?>
+                
+                <?php 
+                $d = new Zend_Date($r["data"]); 
+                
+                
+                
+                ?>
+                
+                    <tr <?php echo ($cont % 2 == 0) ? "class='even'" : ""; ?>>
+                        <td><?php echo $r["id"]; ?></td>
+                        <td><?php echo $r["cliente_nome"]; ?></td>
+                        <td><?php echo $r["quantidade"] ?></td>
+                        <td><?php echo $d->get("dd/MM/yyyy"); ?></td>
+                        <td><?php echo $this->moneyFormat($r["valor_final"]); ?></td>
+
+                        <td><?php echo $r["status"] ?></td>
+                    </tr>
+                    <?php
+                    $cont++;
+                endforeach;
+                ?>
+            </table>
+            <div class="actions">
+                <?php
+                echo $this->paginationControl($this->registros, 'Sliding', 'paginator.phtml');
+                ?>
+
+                <div class="clear">&nbsp;</div>
+            </div>
+        </div>
+
+    </div>
+</div>
