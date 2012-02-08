@@ -10,7 +10,7 @@
         <div class="content">
 
             <form action="<?php echo $this->url(array("controller" => "produtos", "action" => "salvar")); ?>" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="produto[id]" value="<?php echo $this->produto->id ?>" />
+                <input type="hidden" name="produto[id]" value="<?php echo ($this->produto) ? $this->produto->id : "" ; ?>" />
 
                 <fieldset>
                     <legend>Dados do produto</legend>
@@ -33,8 +33,10 @@
                     <p>
                         <label>Categoria</label> <br/>
                         <select name="produto[categoria_id]">
-                            <?php foreach ($this->categorias as $c): ?>
-                                <?php $check = ($c->id = $this->produto->categoria_id) ? "selected='selected'" : ""; ?>
+                            <?php foreach ($this->categorias as $c): 
+                                $cid = $this->produto->categoria_id;
+                                ?>
+                                <?php $check = ($c->id == $cid) ? "selected='selected'" : ""; ?>
                                 <option value="<?php echo $c->id; ?>" <?php echo $check ?> ><?php echo $c->nome; ?></option>
                             <?php endforeach; ?>
                         </select>
@@ -59,7 +61,7 @@
 
                     <p>
                         <label>Quantidade em estoque</label><br/>
-                        <input class="text small" type="text" value="<?php echo $this->produto->estoque ?>" name="produto[estoque]"/>
+                        <input class="text small" type="text" value="<?php echo $this->produto->estoque; ?>" name="produto[estoque]"/>
                     </p>
 
                     <p>

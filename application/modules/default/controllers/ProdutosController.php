@@ -49,8 +49,9 @@ class Default_ProdutosController extends Zend_Controller_Action {
 
     public function cadastrarAction() {
         $dbCategorias = new DbTable_Categoria();
+        $dbProdutos = new DbTable_Produto();
         $this->view->categorias = $dbCategorias->fetchAll();
-        $this->view->registro = new Zend_Db_Table_Row();
+        $this->view->produto = $dbProdutos->createRow();
         $this->view->produto->categoria_id = $this->view->categorias->current()->id;
         $this->render("form");
     }
@@ -64,7 +65,6 @@ class Default_ProdutosController extends Zend_Controller_Action {
             $files = $_FILES;
 
             $dbP = new DbTable_Produto();
-
             $zc = new Zend_Currency();
             $d = new Zend_Date();
 

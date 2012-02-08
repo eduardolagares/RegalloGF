@@ -44,7 +44,8 @@ class Default_ClientesController extends Zend_Controller_Action {
     }
 
     public function cadastrarAction() {
-        $this->view->registro = new Zend_Db_Table_Row();
+        $db = new DbTable_Cliente();
+        $this->view->registro = $db->createRow();
         $this->render("form");
     }
 
