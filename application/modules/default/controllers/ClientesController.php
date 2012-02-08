@@ -44,7 +44,7 @@ class Default_ClientesController extends Zend_Controller_Action {
     }
 
     public function cadastrarAction() {
-        $this->view->registro = new stdClass();
+//        $this->view->registro = new stdClass();
         $this->render("form");
     }
 
