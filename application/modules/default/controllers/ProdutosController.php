@@ -50,7 +50,7 @@ class Default_ProdutosController extends Zend_Controller_Action {
     public function cadastrarAction() {
         $dbCategorias = new DbTable_Categoria();
         $this->view->categorias = $dbCategorias->fetchAll();
-        $this->view->produto = new stdClass();
+//        $this->view->produto = new stdClass();
         $this->view->produto->categoria_id = $this->view->categorias->current()->id;
         $this->render("form");
     }
