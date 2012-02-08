@@ -35,7 +35,8 @@
                         <?php $cont = 0;
                         foreach ($this->produtos as $p): ?>
                             <li >
-                                <a href="#"><img src="img/foto_produto/<?php echo $p->foto; ?>" /></a><br/>
+                                <span><?php echo $p->cod." - ".$p->nome; ?></span><br/>
+                                <img src="img/foto_produto/<?php echo $p->foto; ?>" />
                                 <div class="valor" valor="<?php echo $p->valor_venda; ?>"><?php echo $this->MoneyFormat($p->valor_venda); ?></div>
                                 <div>
                                     <button type="button" class="remover_quantidade">-</button>
