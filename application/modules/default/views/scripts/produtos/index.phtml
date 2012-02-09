@@ -16,6 +16,7 @@
                     <th>Nome</th>
                     <th>Cod.</th>
                     <th>Estoque</th>
+                    <th>Valor Venda</th>
                     <th>Ativo</th>
                     <th>Categoria</th>
                     <th></th>
@@ -26,12 +27,13 @@
                     <tr <?php echo ($cont % 2 == 0) ? "class='even'" : ""; ?>>
                         <td><?php
                 if (!empty($r["foto"])) {
-                    echo "<img height='70' src='" . $this->baseUrl("img/foto_produto/" . $r["foto"]) . "' />";
+                    echo "<img height='70' src='" . $this->baseUrl($this->imagePath("img/foto_produto/" . $r["foto"])) . "' />";
                 }
                     ?></td>
                         <td><?php echo $r["nome"]; ?></td>
                         <td><?php echo $r["cod"]; ?></td>
                         <td><?php echo $r["estoque"]; ?></td>
+                        <td>R$ <?php echo $this->moneyFormat($r["valor_venda"]); ?></td>
                         <td><?php if ($r["ativo"] != 1) : ?><span class="no"></span><?php else: ?><span class="yes"></span><?php endif; ?></td>
                         <td><?php echo $r["produto_categoria"] ?></td>
                         <td><a class="edit" href="<?php echo $this->url(array("controller"=>"produtos","action"=>"editar","id"=>$r["id"]),null,true) ?>">editar</a>
