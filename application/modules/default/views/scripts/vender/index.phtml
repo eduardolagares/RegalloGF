@@ -36,8 +36,8 @@
                         foreach ($this->produtos as $p): ?>
                             <li >
                                 <span><?php echo $p->cod." - ".$p->nome; ?></span><br/>
-                                <img src="img/foto_produto/<?php echo $p->foto; ?>" />
-                                <div class="valor" valor="<?php echo $p->valor_venda; ?>"><?php echo $this->MoneyFormat($p->valor_venda); ?></div>
+                                <img src="<?php echo $this->baseUrl($this->imagePath("img/foto_produto/".$p->foto)); ?>" />
+                                <div class="valor" valor="<?php echo $p->valor_venda; ?>">R$ <?php echo $this->MoneyFormat($p->valor_venda); ?></div>
                                 <div>
                                     <button type="button" class="remover_quantidade">-</button>
                                     <span class="quantidade">0</span>
